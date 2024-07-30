@@ -4,7 +4,7 @@ const port = 3000;
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://krisb1220:<password>@kwizzy.ziabc3a.mongodb.net/?retryWrites=true&w=majority&appName=Kwizzy";
+const uri = "mongodb+srv://krisb1220:" + process.env.MONGO_PASS +"@kwizzy.ziabc3a.mongodb.net/?retryWrites=true&w=majority&appName=Kwizzy";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API versiondd
 const client = new MongoClient(uri, {
